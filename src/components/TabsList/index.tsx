@@ -35,7 +35,12 @@ const TabsList: React.FC = () => {
 
           <Tab label="Services" />
 
-          <Tab label="What's New" />
+          <Tab
+            label="What's New"
+            onClick={() => {
+              navigate("/what-new");
+            }}
+          />
 
           <Tab label="Upcomming" />
 

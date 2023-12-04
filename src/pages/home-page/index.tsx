@@ -10,7 +10,6 @@ const HomePage: React.FC = () => {
     },
   };
 
-  console.log(testData);
   return (
     <div className="grid grid-cols-3 gap-x-8">
       <div className="bg-red-200 px-8 py-4 col-start-1 col-end-3 grid grid-cols-3 gap-4">
