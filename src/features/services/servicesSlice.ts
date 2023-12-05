@@ -10,31 +10,35 @@ import {
 } from "../../constants/NameService";
 
 interface IServiceState {
-  Service1: string[];
+  data: {
+    Service1: string[];
 
-  Service2: string[];
+    Service2: string[];
 
-  Service3: string[];
+    Service3: string[];
 
-  Service4: string[];
+    Service4: string[];
 
-  Service5: string[];
+    Service5: string[];
 
-  Service6: string[];
+    Service6: string[];
+  };
 }
 
 const initialState: IServiceState = {
-  Service1: [],
+  data: {
+    Service1: [],
 
-  Service2: [],
+    Service2: [],
 
-  Service3: [],
+    Service3: [],
 
-  Service4: [],
+    Service4: [],
 
-  Service5: [],
+    Service5: [],
 
-  Service6: [],
+    Service6: [],
+  },
 };
 
 export const serviceSlice = createSlice({
@@ -51,27 +55,27 @@ export const serviceSlice = createSlice({
 
       switch (nameService) {
         case SERVICE_01:
-          state.Service1.push(valueItem);
+          state.data.Service1.push(valueItem);
           break;
 
         case SERVICE_02:
-          state.Service2.push(valueItem);
+          state.data.Service2.push(valueItem);
           break;
 
         case SERVICE_03:
-          state.Service3.push(valueItem);
+          state.data.Service3.push(valueItem);
           break;
 
         case SERVICE_04:
-          state.Service4.push(valueItem);
+          state.data.Service4.push(valueItem);
           break;
 
         case SERVICE_05:
-          state.Service5.push(valueItem);
+          state.data.Service5.push(valueItem);
           break;
 
         case SERVICE_06:
-          state.Service6.push(valueItem);
+          state.data.Service6.push(valueItem);
           break;
       }
     },
@@ -84,42 +88,42 @@ export const serviceSlice = createSlice({
 
       switch (nameService) {
         case SERVICE_01:
-          state.Service1 = state.Service1.filter((el) => {
+          state.data.Service1 = state.data.Service1.filter((el) => {
             return el !== valueItem;
           });
 
           break;
 
         case SERVICE_02:
-          state.Service2 = state.Service2.filter((el) => {
+          state.data.Service2 = state.data.Service2.filter((el) => {
             return el !== valueItem;
           });
 
           break;
 
         case SERVICE_03:
-          state.Service3 = state.Service3.filter((el) => {
+          state.data.Service3 = state.data.Service3.filter((el) => {
             return el !== valueItem;
           });
 
           break;
 
         case SERVICE_04:
-          state.Service4 = state.Service4.filter((el) => {
+          state.data.Service4 = state.data.Service4.filter((el) => {
             return el !== valueItem;
           });
 
           break;
 
         case SERVICE_05:
-          state.Service5 = state.Service5.filter((el) => {
+          state.data.Service5 = state.data.Service5.filter((el) => {
             return el !== valueItem;
           });
 
           break;
 
         case SERVICE_06:
-          state.Service6 = state.Service6.filter((el) => {
+          state.data.Service6 = state.data.Service6.filter((el) => {
             return el !== valueItem;
           });
 
