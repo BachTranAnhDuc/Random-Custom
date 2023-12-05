@@ -52,7 +52,7 @@ const WhatNew: React.FC = () => {
 
   return (
     <div className="grid grid-cols-2 gap-x-8">
-      <div className="bg-sky-200 px-8 py-8 rounded">
+      <div className="bg-gray-50 shadow-lg px-8 py-8 rounded">
         <FormControl className="grid gap-y-4 w-full">
           <TextField
             label="Logo"
@@ -102,7 +102,14 @@ const WhatNew: React.FC = () => {
             </Select>
           </FormControl>
 
-          <Button onClick={handleSubmit}>Save and Preview</Button>
+          <Button
+            onClick={handleSubmit}
+            variant="contained"
+            className="cursor-pointer"
+            size="large"
+          >
+            <p className="text-sm font-medium">Save and Preview</p>
+          </Button>
         </FormControl>
       </div>
 
@@ -136,6 +143,7 @@ const WhatNew: React.FC = () => {
             className="screen p-4"
             style={{
               backgroundColor: phoneData.color,
+              overflowY: "scroll",
             }}
           >
             <div className="h-full grid grid-rows-4 gap-4">
@@ -151,9 +159,7 @@ const WhatNew: React.FC = () => {
                 {phoneData.name}
               </div>
 
-              <div className="text-center" style={{ overflow: "scroll" }}>
-                {phoneData.paragraph}
-              </div>
+              <div className="text-center">{phoneData.paragraph}</div>
             </div>
           </div>
         </div>

@@ -25,7 +25,12 @@ const AppBarComponent: React.FC = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+            className="cursor-pointer"
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1 }}
+          >
             WAVELABS
           </Typography>
 
