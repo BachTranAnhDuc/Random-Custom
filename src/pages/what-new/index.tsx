@@ -52,7 +52,7 @@ const WhatNew: React.FC = () => {
 
   return (
     <div className="grid grid-cols-2 gap-x-8">
-      <div className="bg-gray-50 shadow-lg px-8 py-8 rounded">
+      <div className="bg-gray-50 border-2 border-cyan-200 shadow-lg p-8 rounded">
         <FormControl className="grid gap-y-4 w-full">
           <TextField
             label="Logo"
@@ -60,7 +60,6 @@ const WhatNew: React.FC = () => {
             value={logo}
             onChange={handleChangeLogo}
           />
-
           <TextField
             label="Heading"
             variant="outlined"
@@ -73,7 +72,6 @@ const WhatNew: React.FC = () => {
             value={getName}
             onChange={handleChangeName}
           />
-
           <TextField
             label="Paragraph"
             variant="outlined"
@@ -82,7 +80,6 @@ const WhatNew: React.FC = () => {
             value={paragraph}
             onChange={handleChangeParagraph}
           />
-
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Color</InputLabel>
             <Select
@@ -101,7 +98,6 @@ const WhatNew: React.FC = () => {
               <MenuItem value={"#ff922b"}>Orange</MenuItem>
             </Select>
           </FormControl>
-
           <Button
             onClick={handleSubmit}
             variant="contained"
@@ -113,7 +109,7 @@ const WhatNew: React.FC = () => {
         </FormControl>
       </div>
 
-      <div className="px-8 py-4 rounded flex justify-center">
+      <div className="border-2 border-green-200 shadow-lg px-8 py-4 rounded flex justify-center">
         <div
           className="marvel-device note8"
           style={{

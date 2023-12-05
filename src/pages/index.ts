@@ -1,5 +1,5 @@
 import HomePage from "./home-page";
-import AboutUs from "./about-us";
 import WhatNew from "./what-new";
+import UpComing from "./upcoming";
 
-export { HomePage, AboutUs, WhatNew };
+export { HomePage, WhatNew, UpComing };

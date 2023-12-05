@@ -31,9 +31,19 @@ const TabsList: React.FC = () => {
               navigate("/about-us");
             }}
           />
-          <Tab label="Products" />
+          <Tab
+            label="Products"
+            onClick={() => {
+              navigate("/products");
+            }}
+          />
 
-          <Tab label="Services" />
+          <Tab
+            label="Services"
+            onClick={() => {
+              navigate("/services");
+            }}
+          />
 
           <Tab
             label="What's New"
@@ -42,9 +52,19 @@ const TabsList: React.FC = () => {
             }}
           />
 
-          <Tab label="Upcomming" />
+          <Tab
+            label="Upcoming"
+            onClick={() => {
+              navigate("/upcoming");
+            }}
+          />
 
-          <Tab label="Support" />
+          <Tab
+            label="Support"
+            onClick={() => {
+              navigate("/support");
+            }}
+          />
         </Tabs>
       </Box>
     </Box>
