@@ -1,6 +1,7 @@
 import { Checkbox, FormGroup, FormControlLabel } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { addItem, removeItem } from "../../features/services/servicesSlice";
+import { useAppSelector } from "../../hooks";
 
 interface IServiceItem {
   nameService: string;
@@ -12,6 +13,8 @@ const ServiceItem: React.FC<IServiceItem> = ({
   valuesService,
 }) => {
   const dispatch = useDispatch();
+  const serviceData = useAppSelector((store) => store.services);
+  const itemsData = Object.values(serviceData.data).flat();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
@@ -23,6 +26,10 @@ const ServiceItem: React.FC<IServiceItem> = ({
         removeItem({ nameService: nameService, valueItem: event.target.value }),
       );
     }
+  };
+
+  const checkedExist = (item: string) => {
+    return itemsData.includes(item);
   };
 
   return (
@@ -40,6 +47,7 @@ const ServiceItem: React.FC<IServiceItem> = ({
                 control={<Checkbox onChange={handleChange} />}
                 label={el}
                 value={el}
+                checked={checkedExist(el)}
               />
             );
           })}
