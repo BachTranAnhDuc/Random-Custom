@@ -1,40 +1,48 @@
 import { Checkbox, FormGroup, FormControlLabel } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { addItem, removeItem } from "../../features/services/servicesSlice";
 
 interface IServiceItem {
-  itemNumber: number;
-  valueItem01: string;
-  valueItem02: string;
-  valueItem03: string;
+  nameService: string;
+  valuesService: string[];
 }
 
 const ServiceItem: React.FC<IServiceItem> = ({
-  itemNumber,
-  valueItem01,
-  valueItem02,
-  valueItem03,
+  nameService,
+  valuesService,
 }) => {
-  const handleChange = () => {};
+  const dispatch = useDispatch();
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.checked === true) {
+      dispatch(
+        addItem({ nameService: nameService, valueItem: event.target.value }),
+      );
+    } else {
+      dispatch(
+        removeItem({ nameService: nameService, valueItem: event.target.value }),
+      );
+    }
+  };
 
   return (
     <div className="border-solid border-2 border-sky-300 px-4 py-2">
       <div>
-        <p className="text-lg text-red-500 font-medium">Service {itemNumber}</p>
+        <p className="text-lg text-red-500 font-medium">{nameService}</p>
       </div>
 
       <div>
         <FormGroup>
-          <FormControlLabel
-            control={
-              <Checkbox
-                onChange={() => {
-                  handleChange();
-                }}
+          {valuesService.map((el, index) => {
+            return (
+              <FormControlLabel
+                key={index}
+                control={<Checkbox onChange={handleChange} />}
+                label={el}
+                value={el}
               />
-            }
-            label={valueItem01}
-          />
-          <FormControlLabel control={<Checkbox />} label={valueItem02} />
-          <FormControlLabel control={<Checkbox />} label={valueItem03} />
+            );
+          })}
         </FormGroup>
       </div>
     </div>

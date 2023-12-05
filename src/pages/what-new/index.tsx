@@ -26,13 +26,7 @@ const WhatNew: React.FC = () => {
 
           <TextField label="Name" variant="outlined" />
 
-          <TextField
-            label="Paragraph"
-            variant="outlined"
-            multiline
-            rows={4}
-            maxRows={6}
-          />
+          <TextField label="Paragraph" variant="outlined" multiline rows={4} />
 
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Color</InputLabel>
