@@ -10,7 +10,7 @@ const ShareLayout: React.FC = () => {
 
       <TabsList></TabsList>
 
-      <div className="max-w-7xl mt-8 mx-auto">
+      <div className="max-w-7xl my-8 mx-auto">
         <Outlet></Outlet>
       </div>
     </Box>

@@ -26,7 +26,7 @@ const ServiceItem: React.FC<IServiceItem> = ({
   };
 
   return (
-    <div className="border-solid border-2 border-sky-300 px-4 py-2">
+    <div className="border-solid border-2 rounded border-pink-200 bg-white shadow shadow-pink-200 px-4 py-2">
       <div>
         <p className="text-lg text-red-500 font-medium">{nameService}</p>
       </div>

@@ -13,8 +13,8 @@ const HomePage: React.FC = () => {
   const dataServices = useAppSelector((store) => store.services);
 
   return (
-    <div className="grid grid-cols-3 gap-x-8">
-      <div className="bg-red-200 px-8 py-4 col-start-1 col-end-3 grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-3 gap-x-8 items-start">
+      <div className="bg-gray-50 shadow-lg rounded p-8 col-start-1 col-end-3 grid grid-cols-3 gap-4">
         <ServiceItem
           nameService={SERVICE_01}
           valuesService={["option1", "option2", "option3"]}
@@ -46,13 +46,15 @@ const HomePage: React.FC = () => {
         ></ServiceItem>
       </div>
 
-      <div className="bg-yellow-200 px-8 py-4 grid grid-rows-[max-content_1fr] gap-4">
+      <div className="bg-gray-50 h-full shadow-lg rounded  p-8 grid grid-rows-[max-content_1fr] gap-4">
         <div>
           <p className="text-xl font-bold text-red-500 uppercase">response</p>
         </div>
 
-        <div>
-          <pre>{JSON.stringify(dataServices, null, 2)}</pre>
+        <div className="bg-white p-4 rounded border-2 border-teal-200 shadow shadow-teal-200">
+          <pre>
+            <code>{JSON.stringify(dataServices, null, 2)}</code>
+          </pre>
         </div>
       </div>
     </div>
