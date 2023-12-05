@@ -14,7 +14,7 @@ const ServiceItem: React.FC<IServiceItem> = ({
   const dispatch = useDispatch();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.checked === true) {
+    if (event.target.checked) {
       dispatch(
         addItem({ nameService: nameService, valueItem: event.target.value }),
       );

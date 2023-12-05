@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
 import {
   SERVICE_01,
   SERVICE_02,
@@ -86,42 +87,42 @@ export const serviceSlice = createSlice({
           state.Service1 = state.Service1.filter((el) => {
             return el !== valueItem;
           });
+
           break;
 
         case SERVICE_02:
-          state.Service2.push(valueItem);
-
           state.Service2 = state.Service2.filter((el) => {
             return el !== valueItem;
           });
+
           break;
 
         case SERVICE_03:
-          state.Service3.push(valueItem);
-
           state.Service3 = state.Service3.filter((el) => {
             return el !== valueItem;
           });
+
           break;
 
         case SERVICE_04:
-          state.Service4.push(valueItem);
-
           state.Service4 = state.Service4.filter((el) => {
             return el !== valueItem;
           });
+
           break;
 
         case SERVICE_05:
           state.Service5 = state.Service5.filter((el) => {
             return el !== valueItem;
           });
+
           break;
 
         case SERVICE_06:
           state.Service6 = state.Service6.filter((el) => {
             return el !== valueItem;
           });
+
           break;
       }
     },
